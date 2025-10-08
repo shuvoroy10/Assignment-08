@@ -1,22 +1,30 @@
 import React from "react";
-import { FaAppStore } from "react-icons/fa";
-import { IoLogoGooglePlaystore } from "react-icons/io5";
 
+import useApps from "../../hooks/useApps";
+import HeroSection from "../../Components/HeroSection/HeroSection";
+import TrendingApps from "../../Components/TrendingApps/TrendingApps";
 const Home = () => {
+  const { apps } = useApps();
+  const trendingApps = apps.slice(0, 8);
   return (
-    <div>
-      <div className="text-center font-semibold text-black">
-        <h1 className="text-2xl md:text-4xl lg:text-6xl ">
-          We Build <br />
-          <span className="text-[#632EE3]">Productive</span> Apps
-        </h1>
-        <p className="mt-1 lg:mt-4 text-[10px] lg:text-xl">At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. <br />Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
+    <>
+      <HeroSection />
+      <div className="text-center mt-5">
+        <h2 className="text-xl md:text-2xl lg:text-5xl font-bold">
+          Trending Apps
+        </h2>
+        <p className="mt-2">Explore All Trending Apps on the Market developed by us</p>
       </div>
-      <div className="flex items-center gap-12 justify-center mt-5 lg:mt-10 text-xl lg:ext-2xl">
-        <button className="flex items-center gap-2 border-1 p-2 rounded-xl"><IoLogoGooglePlaystore /> Google Play</button>
-        <button className="flex items-center gap-2 border-1 p-2 rounded-xl"><FaAppStore /> App Store</button>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 container mx-auto gap-10">
+        {trendingApps.map((app) => (
+          <TrendingApps key={app.id} app={app}></TrendingApps>
+        ))}
+        
       </div>
-    </div>
+      <button className="bg-linear-to-bl from-violet-500 to-fuchsia-500 text-white p-2 w-[150px] mx-auto rounded-[8px] font-semibold my-4">
+          Show All
+        </button>
+    </>
   );
 };
 
