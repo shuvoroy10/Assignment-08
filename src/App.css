@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+ul li a.active{
+    color: #9F62F2;
+}
