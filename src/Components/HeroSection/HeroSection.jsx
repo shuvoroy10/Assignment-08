@@ -19,11 +19,11 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="flex items-center gap-12 justify-center mt-5 md:mt-8 lg:mt-10 text-xl lg:ext-2xl">
-          <button className="flex items-center gap-2 border-1 p-2 rounded-xl">
-            <IoLogoGooglePlaystore /> Google Play
+          <button className="btn flex items-center gap-2 border-1 p-2 rounded-xl">
+            <IoLogoGooglePlaystore /> <a target="_blank" href="https://play.google.com/store/games">Google Play</a>
           </button>
-          <button className="flex items-center gap-2 border-1 p-2 rounded-xl">
-            <FaAppStore /> App Store
+          <button className="btn flex items-center gap-2 border-1 p-2 rounded-xl">
+            <FaAppStore /><a target="_blank" href="https://www.apple.com/app-store/">App Store</a>
           </button>
         </div>
         <div className="mt-5 md:mt-8 lg:mt-10">

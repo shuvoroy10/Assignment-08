@@ -3,6 +3,7 @@ import React from "react";
 import useApps from "../../hooks/useApps";
 import HeroSection from "../../Components/HeroSection/HeroSection";
 import TrendingApps from "../../Components/TrendingApps/TrendingApps";
+import { Link } from "react-router";
 const Home = () => {
   const { apps } = useApps();
   const trendingApps = apps.slice(0, 8);
@@ -22,7 +23,7 @@ const Home = () => {
         
       </div>
       <button className="bg-linear-to-bl from-violet-500 to-fuchsia-500 text-white p-2 w-[150px] mx-auto rounded-[8px] font-semibold my-4">
-          Show All
+          <Link to={'/apps'}>Show All</Link>
         </button>
     </>
   );
