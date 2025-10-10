@@ -15,8 +15,8 @@ const Installation = () => {
   };
 
   const sortedItem = (() => {
-    if (sortOrder === "size-asc") return [...installList].sort((a, b) => a.size - b.size);
-    if (sortOrder === "size-desc") return [...installList].sort((a, b) => b.size - a.size);
+    if (sortOrder === "size-asc") return [...installList].sort((a, b) => a.downloads - b.downloads);
+    if (sortOrder === "size-desc") return [...installList].sort((a, b) => b.downloads - a.downloads);
     return installList;
   })();
 
@@ -55,7 +55,7 @@ const Installation = () => {
                   onChange={(e) => setSortOrder(e.target.value)}
                   className="select select-bordered"
                 >
-                  <option value="none">Sort by Size</option>
+                  <option value="none">Sort by Download</option>
                   <option value="size-asc">Low-&gt;High</option>
                   <option value="size-desc">High-&gt;Low</option>
                 </select>
@@ -70,7 +70,7 @@ const Installation = () => {
                     <h4>{a.title}</h4>
                     <div className="flex items-start lg:items-center flex-col lg:flex-row">
                       <div className="p-2 flex items-center gap-2 text-[#00D390]">
-                        <FaDownload /> {a.downloads}
+                        <FaDownload /> {a.downloads}M
                       </div>
                       <div className="p-2 flex items-center gap-2 text-[#FF8811]">
                         <FaRegStar /> {a.ratingAvg}

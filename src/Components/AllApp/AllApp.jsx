@@ -12,7 +12,7 @@ const AllApp = ({app}) => {
                     </div>
                     <h4>{title}</h4>
                     <div className='flex gap-28'>
-                        <div className='bg-[#F1F5E8] p-2 flex items-center gap-2 text-[#00D390]'><FaDownload /> {downloads}</div>
+                        <div className='bg-[#F1F5E8] p-2 flex items-center gap-2 text-[#00D390]'><FaDownload /> {downloads}M</div>
                         <div className='bg-[#FFF0E1] p-2 flex items-center gap-2 text-[#FF8811]'><FaRegStar />{ratingAvg}</div>
                     </div>
                    
