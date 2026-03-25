@@ -6,6 +6,7 @@ import Installation from "../Pages/Installation/Installation";
 import AppsDetails from "../Components/AppsDetails/AppsDetails";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
+
 const router = createBrowserRouter([
     {
     path: '/',
